@@ -60,7 +60,7 @@
         android:weightSum="3">
 
         <TextView
-            android:id="@+id/tv_11"
+            android:id="@+id/currencyTV"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
@@ -73,7 +73,7 @@
             android:textStyle="normal|bold" />
 
         <TextView
-            android:id="@+id/tv_12"
+            android:id="@+id/countTV"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
@@ -86,7 +86,7 @@
             android:textStyle="normal|bold" />
 
         <TextView
-            android:id="@+id/tv_13"
+            android:id="@+id/totTV"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
@@ -100,16 +100,16 @@
     </LinearLayout>
 
     <ScrollView
-        android:id="@+id/ScrollView11"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/tableLL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="visible">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -117,7 +117,7 @@
                 android:background="@android:color/black"
                 android:weightSum="3">
 
-                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                <TableLayout
                     android:id="@+id/table"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

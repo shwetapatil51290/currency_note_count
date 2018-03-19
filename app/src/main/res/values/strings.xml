@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Currency Note Count</string>
+    <string name="app_name">Currency Note Calculator</string>
     <string name="enter_amount">Enter the Amount -</string>
     <string name="amount">Amount</string>
     <string name="enter">Enter</string>

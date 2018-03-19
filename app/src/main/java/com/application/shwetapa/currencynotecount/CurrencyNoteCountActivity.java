@@ -9,6 +9,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -28,6 +29,7 @@ public class CurrencyNoteCountActivity extends AppCompatActivity {
     private Button mEnterBtn;
     private LinearLayout mHeading;
     private LinearLayout mTotalLL;
+    private ScrollView mScrollView;
 
     private int limit;
     private double mAmount;
@@ -57,6 +59,7 @@ public class CurrencyNoteCountActivity extends AppCompatActivity {
         mTotalAmountTV = findViewById(R.id.totalAmountTV);
         mHeading = findViewById(R.id.heading);
         mTotalLL = findViewById(R.id.totalLL);
+        mScrollView = findViewById(R.id.scrollView);
     }
 
     private class MyOnClickListener implements OnClickListener {
@@ -257,6 +260,7 @@ public class CurrencyNoteCountActivity extends AppCompatActivity {
      * Removing table rows from table layout
      */
     private void removeTableRows() {
+        mScrollView.setVisibility(GONE);
         int j = mTableLayout.getChildCount() - 1;
         while (mTableLayout.getChildCount() > 0) {
             TableRow row1 = (TableRow) mTableLayout.getChildAt(j);
@@ -317,6 +321,7 @@ public class CurrencyNoteCountActivity extends AppCompatActivity {
 
                 mHeading.setVisibility(VISIBLE);
                 mTotalLL.setVisibility(VISIBLE);
+                mScrollView.setVisibility(VISIBLE);
 
                 mTableLayout.addView(row, new TableLayout.LayoutParams(
                         TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
