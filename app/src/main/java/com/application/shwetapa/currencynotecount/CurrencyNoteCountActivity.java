@@ -69,11 +69,13 @@ public class CurrencyNoteCountActivity extends AppCompatActivity {
                 Toast.makeText(CurrencyNoteCountActivity.this, "Please enter a valid amount!!", Toast.LENGTH_LONG).show();
                 mHeading.setVisibility(GONE);
                 mTotalLL.setVisibility(GONE);
+                removeTableRows();
             } else if (Double.parseDouble(mAmountET.getText().toString()) > 9999999) {
                 Toast.makeText(CurrencyNoteCountActivity.this, "Currency out of stock!!", Toast.LENGTH_LONG).show();
                 mAmountET.setText("");
                 mHeading.setVisibility(GONE);
                 mTotalLL.setVisibility(GONE);
+                removeTableRows();
             } else {
                 mAmount = Double.parseDouble(mAmountET.getText().toString());
                 initializeVariables();
