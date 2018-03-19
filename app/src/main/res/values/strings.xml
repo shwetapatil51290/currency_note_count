@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Currency Note Count</string>
+    <string name="enter_amount">Enter the Amount -</string>
+    <string name="amount">Amount</string>
+    <string name="enter">Enter</string>
+    <string name="currency">Currency</string>
+    <string name="count">Count</string>
+    <string name="total">Total</string>
+
+
+
+</resources>
